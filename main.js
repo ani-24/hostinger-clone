@@ -23,13 +23,13 @@ const addCommas = (num) => {
 };
 
 const counterSpan = document.querySelector(".counter");
-let counter = 1000000;
+let counter = 1273000;
 const final = 1278620;
 
 const count = () => {
-  if (counter < final) {
+  if (counter <= final) {
     counterSpan.innerText = addCommas(counter);
-    counter += 500;
+    counter += 20;
     setTimeout(count, 1);
   }
 };
@@ -37,7 +37,7 @@ const count = () => {
 setTimeout(count, 1750);
 
 document.addEventListener("DOMContentLoaded", () => {
-  counterSpan.innerHTML = addCommas(counter);
+  counterSpan.innerHTML = addCommas(1000000);
 });
 
 // Animate on scroll
