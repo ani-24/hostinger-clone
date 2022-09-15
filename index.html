@@ -113,6 +113,15 @@
         .remove-blur {
           @apply blur-none;
         }
+        .dropdown-menu {
+          @apply p-6 bg-white rounded-lg text-black absolute whitespace-nowrap left-1/2 top-full -translate-x-1/2 after:absolute after:top-0 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:h-4 after:w-4 after:bg-white after:rotate-45 opacity-0 pointer-events-none duration-200;
+        }
+        .nav-item {
+          @apply block pb-3;
+        }
+        .dropdown-icon {
+          @apply h-12 w-12 bg-violet-100 bg-opacity-50 rounded-full flex justify-center items-center;
+        }
       }
     </style>
   </head>
@@ -206,29 +215,190 @@
       </div>
       <div class="flex items-center">
         <div class="items-center text-white font-semibold hidden lg:flex">
-          <div
-            class="cursor-pointer mr-10 transition duration-150 hover:opacity-75"
-          >
-            Hosting
-            <span><i class="fa-sharp fa-solid fa-chevron-down"></i></span>
+          <div class="cursor-pointer mr-10 relative">
+            <div class="duration-150 hover:opacity-75 nav-item">
+              Hosting
+              <span><i class="fa-sharp fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="dropdown-menu">
+              <ul>
+                <li class="flex items-center mb-6">
+                  <div class="dropdown-icon">
+                    <img
+                      src="https://assets.hostinger.com/images/hero/icons/shared-hosting-ico-3b9eae97d4.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <p class="text-lg font-bold">Web Hosting</p>
+                    <p class="opacity-60">For small to medium websites</p>
+                  </div>
+                </li>
+                <li class="flex items-center mb-6">
+                  <div class="dropdown-icon">
+                    <img
+                      src="https://assets.hostinger.com/images/hero/icons/cloud-hosting-ico-8b3eacbef9.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <p class="text-lg font-bold">Cloud Hosting</p>
+                    <p class="opacity-60">For large scale projects</p>
+                  </div>
+                </li>
+                <li class="flex items-center">
+                  <div class="dropdown-icon">
+                    <img
+                      src="https://assets.hostinger.com/images/hero/icons/wordpress-hosting-ico-f260728d34.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <p class="text-lg font-bold">WordPress Hosting</p>
+                    <p class="opacity-60">
+                      Optimized solutions for WordPress hosting
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div
-            class="cursor-pointer mr-10 transition duration-150 hover:opacity-75"
-          >
-            VPS
-            <span><i class="fa-sharp fa-solid fa-chevron-down"></i></span>
+          <div class="cursor-pointer mr-10 relative">
+            <div class="duration-150 hover:opacity-75 nav-item">
+              VPS <span><i class="fa-sharp fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="dropdown-menu">
+              <ul>
+                <li class="mb-6 flex">
+                  <div class="dropdown-icon">
+                    <img
+                      src="https://assets.hostinger.com/images/hero/icons/vps-hosting-ico-ae5dec82ad.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <p class="text-lg font-bold">VPS Hosting</p>
+                    <p class="opacity-60">Dedicating resources to scale</p>
+                  </div>
+                </li>
+                <li class="mb-6 flex">
+                  <div class="dropdown-icon">
+                    <img
+                      src="https://assets.hostinger.com/images/hero/icons/cyber-panel-vps-hosting-ico-85f6512246.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <p class="text-lg font-bold">CyberPanel Hosting</p>
+                    <p class="opacity-60">
+                      Control Panel with Open/LiteSpeed Webserver
+                    </p>
+                  </div>
+                </li>
+                <li class="flex">
+                  <div class="dropdown-icon">
+                    <img
+                      src="https://assets.hostinger.com/images/hero/icons/minecraft-hosting-ico-48c44ca8a8.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <p class="text-lg font-bold">Minecraft Server Hosting</p>
+                    <p class="opacity-60">Share your Minecraft Experience</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div
-            class="cursor-pointer mr-10 transition duration-150 hover:opacity-75"
-          >
-            Email
-            <span><i class="fa-sharp fa-solid fa-chevron-down"></i></span>
+          <div class="cursor-pointer mr-10 relative">
+            <div class="duration-150 hover:opacity-75 nav-item">
+              Email
+              <span><i class="fa-sharp fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="dropdown-menu">
+              <ul>
+                <li class="mb-6 flex">
+                  <div class="dropdown-icon">
+                    <img
+                      src="https://assets.hostinger.com/images/hero/icons/workspace-email-hosting-ico-f6d95080f4.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <p class="text-lg font-bold">
+                      Google Workspace Email Hosting
+                    </p>
+                    <p class="opacity-60">
+                      Get custom email and 30GB of storage
+                    </p>
+                  </div>
+                </li>
+                <li class="flex">
+                  <div class="dropdown-icon">
+                    <img
+                      src="https://assets.hostinger.com/images/hero/icons/titan-email-hosting-ico-adbf24006e.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <p class="text-lg font-bold">Hostinger Email Hosting</p>
+                    <p class="opacity-60">
+                      Promote your business with every outreach
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div
-            class="cursor-pointer mr-10 transition duration-150 hover:opacity-75"
-          >
-            Domain
-            <span><i class="fa-sharp fa-solid fa-chevron-down"></i></span>
+          <div class="cursor-pointer mr-10 relative">
+            <div class="duration-150 hover:opacity-75 nav-item">
+              Domain
+              <span><i class="fa-sharp fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="dropdown-menu">
+              <ul>
+                <li class="mb-6 flex">
+                  <div class="dropdown-icon">
+                    <img
+                      src="https://assets.hostinger.com/images/hero/icons/domain-checker-ico-9f56a54b4a.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <p class="text-lg font-bold">Domain Name Search</p>
+                    <p class="opacity-60">Find the perfect domain name</p>
+                  </div>
+                </li>
+                <div class="mb-6 flex">
+                  <div class="dropdown-icon">
+                    <img
+                      src="https://assets.hostinger.com/images/hero/icons/whois-ico-05661c09d0.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <p class="text-lg font-bold">WHOIS Lookup</p>
+                    <p class="opacity-60">
+                      Lookup tool to find WHOIS information
+                    </p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="dropdown-icon">
+                    <img
+                      src="https://assets.hostinger.com/images/hero/icons/domain-transfer-ico-2a5c55e300.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <div class="text-lg font-bold">Domain Transfer</div>
+                    <p class="opacity-60">
+                      Want to transfer domain to Hostinger?
+                    </p>
+                  </div>
+                </div>
+              </ul>
+            </div>
           </div>
           <a
             href="#"
@@ -270,7 +440,9 @@
           &times;
         </div>
       </div>
-      <div class="bg-white rounded-lg border-[1px] border-gray-300 p-8">
+      <div
+        class="bg-white rounded-lg border-[1px] border-gray-300 p-8 overflow-auto"
+      >
         <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6 language-list">
           <div class="flex cursor-pointer duration-100 hover:translate-x-2">
             <img

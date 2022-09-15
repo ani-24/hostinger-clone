@@ -96,3 +96,18 @@ searchInput.addEventListener("input", () => {
     }
   });
 });
+
+// Dropdown
+
+const listItems = document.querySelectorAll(".nav-item");
+
+listItems.forEach((el) => {
+  el.addEventListener("mouseenter", () => {
+    const dropdown = el.nextElementSibling;
+    dropdown.setAttribute("style", "opacity: 1; pointer-events: all");
+  });
+  el.parentElement.addEventListener("mouseleave", () => {
+    const dropdown = el.nextElementSibling;
+    dropdown.setAttribute("style", "opacity: 0; pointer-events: none");
+  });
+});
