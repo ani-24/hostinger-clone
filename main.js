@@ -71,6 +71,7 @@ language.addEventListener("click", () => {
   } else {
     document.body.classList.add("h-screen", "overflow-hidden");
     languageListContainer.classList.remove("hidden");
+    window.scrollTo({ top: 0 });
   }
 });
 
@@ -90,7 +91,7 @@ searchInput.addEventListener("input", () => {
   languages.forEach((el) => {
     el.classList.remove("pointer-events-auto", "opacity-100");
     el.classList.add("pointer-events-none", "opacity-30");
-    if (el.innerText.toLowerCase().includes(searchInput.value)) {
+    if (el.innerText.toLowerCase().includes(searchInput.value.toLowerCase())) {
       el.classList.remove("pointer-events-none", "opacity-30");
       el.classList.add("pointer-events-auto", "opacity-100");
     }

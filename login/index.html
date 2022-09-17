@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              theme: "#6747c7",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .login-with {
+          @apply block w-full py-3 flex justify-center items-center border-[1px] border-gray-300 rounded-md font-semibold gap-3;
+        }
+        .input {
+          @apply w-full py-3 px-6 border-[1px] border-gray-300 outline-none rounded-md transition-all duration-150;
+        }
+        .label {
+          @apply absolute left-3 top-1/2 -translate-y-1/2 z-10 text-gray-900 px-2 bg-white transition-all duration-150 pointer-events-none;
+        }
+        .active {
+          @apply top-0 text-sm text-theme;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex justify-center items-center h-screen">
+      <a href="/" class="absolute left-8 top-8">
+        <img
+          src="https://assets.hostinger.com/images/logo-dark-1b05f1e5e7.svg"
+          alt=""
+        />
+      </a>
+      <div class="w-4/5 max-w-md">
+        <p class="font-bold text-3xl mb-8 text-center">Log in</p>
+        <div
+          class="w-full relative pb-8 mb-8 after:absolute after:h-[1px] after:w-full after:bg-gray-300 after:bottom-0 before:absolute before:content-['OR'] before:top-full before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:px-2 before:bg-white before:z-10 before:font-bold before:opacity-75 before:text-sm"
+        >
+          <a href="#" class="login-with mb-3">
+            <img
+              src="https://assets.hostinger.com/images/login/google-213cd1c446.svg"
+              alt=""
+            />
+            <span>Google</span>
+          </a>
+          <a href="#" class="login-with bg-[#1877f2] text-white">
+            <img
+              src="https://assets.hostinger.com/images/login/facebook-7fcb46c06e.svg"
+              alt=""
+            />
+            <span>Facebook</span>
+          </a>
+        </div>
+        <div class="w-full">
+          <div class="relative mb-4">
+            <input type="text" class="input" />
+            <label class="label">Email</label>
+          </div>
+          <div class="relative">
+            <input type="password" class="input" />
+            <label class="label">Password</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./login.js"></script>
+  </body>
+</html>
