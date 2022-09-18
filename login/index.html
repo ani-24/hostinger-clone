@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -12,6 +16,52 @@
           extend: {
             colors: {
               theme: "#6747c7",
+            },
+            keyframes: {
+              err: {
+                "0%": {
+                  translate: "8px",
+                },
+                "10%": {
+                  translate: "-8px",
+                },
+                "20%": {
+                  translate: "5px",
+                },
+                "30%": {
+                  translate: "-5px",
+                },
+                "40%": {
+                  translate: "4px",
+                },
+                "50%": {
+                  translate: "-4px",
+                },
+                "60%": {
+                  translate: "3px",
+                },
+                "70%": {
+                  translate: "-3px",
+                },
+                "82%": {
+                  translate: "2px",
+                },
+                "91%": {
+                  translate: "-2px",
+                },
+                "95%": {
+                  translate: "1px",
+                },
+                "97%": {
+                  translate: "-1px",
+                },
+                "100%": {
+                  trasnlate: "0",
+                },
+              },
+            },
+            animation: {
+              err: "err 1s",
             },
           },
         },
@@ -30,6 +80,12 @@
         }
         .active {
           @apply top-0 text-sm text-theme;
+        }
+        .invalid {
+          @apply text-[#fc5185];
+        }
+        .valid {
+          @apply text-[#6747c7];
         }
       }
     </style>
@@ -62,15 +118,36 @@
             <span>Facebook</span>
           </a>
         </div>
-        <div class="w-full">
-          <div class="relative mb-4">
-            <input type="text" class="input" />
-            <label class="label">Email</label>
-          </div>
-          <div class="relative">
-            <input type="password" class="input" />
-            <label class="label">Password</label>
-          </div>
+        <div class="w-full text-center">
+          <form action="#">
+            <div class="relative mb-4">
+              <input type="text" class="input email" />
+              <label class="label">Email</label>
+            </div>
+            <div class="relative">
+              <input type="password" class="input password" />
+              <label class="label">Password</label>
+              <i
+                class="fa-solid fa-eye absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer eye-icon"
+              ></i>
+            </div>
+            <button
+              class="w-full font-semibold py-3 bg-theme rounded-md text-white mt-8 mb-4"
+              type="submit"
+            >
+              Log in
+            </button>
+          </form>
+          <a href="#" class="text-theme text-center font-semibold text-sm"
+            >Forgot password?</a
+          >
+          <p class="mt-8">
+            Not a member yet?
+            <a href="#" class="text-theme font-semibold"
+              >Choose a hosting plan</a
+            >
+            and get started now!
+          </p>
         </div>
       </div>
     </div>
