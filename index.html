@@ -589,9 +589,9 @@
       </div>
     </div>
     <div
-      class="fixed h-screen w-full bg-white z-50 transition-all duration-300 -right-full sidenav lg:hidden"
+      class="fixed h-screen w-full bg-gray-100 z-50 transition-all duration-300 -right-full sidenav lg:hidden"
     >
-      <ul>
+      <ul class="max-h-[90vh] overflow-auto bg-white">
         <li class="sidenav-item bg-[#6940e610] close-sidenav">
           <span
             ><i class="fa-solid fa-circle-xmark mr-1"></i> Close Navbar</span
@@ -655,6 +655,14 @@
               <a href="#" class="sidenav-dropdown-link">Domain Transfer</a>
             </li>
           </ul>
+        </li>
+        <li class="sidenav-item">
+          <a
+            href="/login/"
+            class="flex py-2 w-full border-[1px] border-gray-900 rounded-full justify-center items-center bg-gray-900 text-white"
+            ><img src="./img/lock.svg" alt="" />
+            <span class="ml-2">Log In</span></a
+          >
         </li>
       </ul>
     </div>
