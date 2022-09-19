@@ -131,6 +131,18 @@
         .dropdown-icon {
           @apply h-12 w-12 bg-violet-100 bg-opacity-50 rounded-full flex justify-center items-center;
         }
+        .sidenav-item {
+          @apply border-b-[1px] border-gray-200 p-4 cursor-pointer font-bold;
+        }
+        .sidenav-item-p {
+          @apply flex justify-between items-center;
+        }
+        .sidenav-dropdown {
+          @apply w-[90%] mx-auto transition-all h-0 overflow-hidden;
+        }
+        .sidenav-dropdown-link {
+          @apply p-3 w-full block border-b-[1px] border-gray-200 hover:text-red-100;
+        }
       }
     </style>
   </head>
@@ -140,7 +152,7 @@
     >
       <div class="flex items-center">
         <div class="cursor-pointer mr-5 md:mr-10">
-          <img src="./img/logo.svg" alt="" />
+          <img src="./img/logo.svg" class="w-24 sm:w-32" alt="" />
         </div>
         <div class="flex items-center cursor-pointer language">
           <img
@@ -352,7 +364,7 @@
           <span class="ml-2 hidden md:inline">Cart</span>
         </div>
         <div
-          class="flex flex-col justify-between w-5 h-3 cursor-pointer lg:hidden"
+          class="flex flex-col justify-between w-5 h-3 cursor-pointer lg:hidden hamburger"
         >
           <div class="bar"></div>
           <div class="bar"></div>
@@ -575,6 +587,76 @@
           </div>
         </div>
       </div>
+    </div>
+    <div
+      class="fixed h-screen w-full bg-white z-50 transition-all duration-300 -right-full sidenav"
+    >
+      <ul>
+        <li class="sidenav-item bg-[#6940e610] close-sidenav">
+          <span
+            ><i class="fa-solid fa-circle-xmark mr-1"></i> Close Navbar</span
+          >
+        </li>
+        <li class="sidenav-item">
+          <p class="sidenav-item-p">
+            Hosting <i class="fa-solid fa-chevron-down"></i>
+          </p>
+          <ul class="sidenav-dropdown hide">
+            <li><a href="#" class="sidenav-dropdown-link">Web Hosting</a></li>
+            <li><a href="#" class="sidenav-dropdown-link">Cloud Hosting</a></li>
+            <li>
+              <a href="#" class="sidenav-dropdown-link">WordPress Hosting</a>
+            </li>
+          </ul>
+        </li>
+        <li class="sidenav-item">
+          <p class="sidenav-item-p">
+            VPS <i class="fa-solid fa-chevron-down"></i>
+          </p>
+          <ul class="sidenav-dropdown hide">
+            <li><a href="#" class="sidenav-dropdown-link">VPS Hosting</a></li>
+            <li>
+              <a href="#" class="sidenav-dropdown-link">CyperPanel Hosting</a>
+            </li>
+            <li>
+              <a href="#" class="sidenav-dropdown-link"
+                >Minecraft Server Hosting</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="sidenav-item">
+          <p class="sidenav-item-p">
+            Email <i class="fa-solid fa-chevron-down"></i>
+          </p>
+          <ul class="sidenav-dropdown hide">
+            <li>
+              <a href="#" class="sidenav-dropdown-link"
+                >Google Wordspace Email Hosting Hosting</a
+              >
+            </li>
+            <li>
+              <a href="#" class="sidenav-dropdown-link"
+                >Hostinger Email Hosting</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="sidenav-item">
+          <p class="sidenav-item-p">
+            Domain <i class="fa-solid fa-chevron-down"></i>
+          </p>
+          <ul class="sidenav-dropdown hide">
+            <li>
+              <a href="#" class="sidenav-dropdown-link">Domain Name Search</a>
+            </li>
+            <li><a href="#" class="sidenav-dropdown-link">WHOIS Lookup</a></li>
+            <li>
+              <a href="#" class="sidenav-dropdown-link">Domain Transfer</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
     <div
       class="bg-gray-900 text-white px-4 flex justify-center items-center lg:px-10 overflow-hidden py-8 gap-8 bg-[url('./img/bg_pattern.jpg')] relative pb-20"

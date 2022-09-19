@@ -112,3 +112,33 @@ listItems.forEach((el) => {
     dropdown.setAttribute("style", "opacity: 0; pointer-events: none");
   });
 });
+
+// Sidenav
+
+const hamburger = document.querySelector(".hamburger");
+const sidenav = document.querySelector(".sidenav");
+
+const closeSidenav = document.querySelector(".close-sidenav");
+
+hamburger.addEventListener("click", () => {
+  sidenav.classList.toggle("-right-full");
+});
+
+closeSidenav.addEventListener("click", () => {
+  sidenav.classList.add("-right-full");
+});
+
+const sidenavItems = document.querySelectorAll(".sidenav-item");
+
+sidenavItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    const dropdown = item.querySelector(".sidenav-dropdown");
+    if (dropdown.classList.contains("hide")) {
+      dropdown.classList.remove("hide");
+      dropdown.style.height = "100%";
+    } else {
+      dropdown.style.height = 0;
+      dropdown.classList.add("hide");
+    }
+  });
+});
